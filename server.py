@@ -6,7 +6,7 @@ import face_recognition
 import os
 
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
-UPLOAD_FOLDER = 'C:/temp/photos'
+UPLOAD_FOLDER = './temp_photos'
 
 app = Flask(__name__)
 app.secret_key = "secret key"
@@ -107,4 +107,4 @@ def search():
     return ret
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0')

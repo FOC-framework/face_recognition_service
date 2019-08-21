@@ -95,7 +95,7 @@ def search():
             face_distances = face_recognition.face_distance(known_face_encodings, newFace.encoding)
             for faceIdx in range(len(face_distances)):
                 face_distance = face_distances[faceIdx]
-                if face_distance < 0.6:
+                if face_distance < 0.5:
                     face = faces[faceIdx]
                     if addComma:
                         ret += ","
